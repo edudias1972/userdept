@@ -4,7 +4,7 @@ CRUD utilizando Java entre Usuario e Despartamento 14-01-2024
 
 Construir uma API REST com banco de dados usando Java e Spring Boot
 
-Objetivos 
+Objetivos
 Resgatar fundamentos de programação
 Colocar em prática esses fundamentos
 Criar um pequeno sistema com ferramentas e práticas de mercado
@@ -12,13 +12,13 @@ Dar mais um passo em direção à preparação para o mercado
 Visão geral do sistema
 Vamos construir um pequeno sistema (API REST) de usuários e departamentos, com os seguintes casos de uso:
 
-Buscar todos usuários                GET         Ler   
+Buscar todos usuários                GET         Ler
 
 Buscar um usuário pelo seu id        GET         Ler
 
 Inserir um novo usuário              POST        Inserte
 
-Alterar dados de um usuario          PUT         UPDATE 
+Alterar dados de um usuario          PUT         UPDATE
 
 Remover um usuário                   DEL         DELETE
 
@@ -33,7 +33,7 @@ Desenvolvimento moderno: relacional -> objeto -> json
 
 
 -------------------------------------------------------------------------------------------------------------------------------------
-Passos do Projeto 
+Passos do Projeto
 
 Criar o projeto
 
@@ -76,7 +76,7 @@ spring.jpa.properties.hibernate.format_sql=true
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-Script SQL  2 departamentos de exemplo  e seus respectivos usuarios 
+Script SQL  2 departamentos de exemplo  e seus respectivos usuarios
 
 INSERT INTO tb_department(name) VALUES ('Gestão');
 INSERT INTO tb_department(name) VALUES ('Informática');
@@ -88,3 +88,4 @@ INSERT INTO tb_user(department_id, name, email) VALUES (1, 'Bob', 'bob@gmail.com
 INSERT INTO tb_user(department_id, name, email) VALUES (2, 'Alex', 'alex@gmail.com');
 
 INSERT INTO tb_user(department_id, name, email) VALUES (2, 'Ana', 'ana@gmail.com');
+
