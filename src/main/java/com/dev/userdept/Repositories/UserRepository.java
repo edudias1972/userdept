@@ -1,4 +1,7 @@
-package com.dev.userdept;
+package com.dev.userdept.Repositories;
 
-public interface UserRepository {
+import com.dev.userdept.entities.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository <User, Long>{
 }
