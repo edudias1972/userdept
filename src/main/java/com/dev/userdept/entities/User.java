@@ -1,11 +1,11 @@
 package com.dev.userdept.entities;
 
-
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
-@Table(name= "tb_user ")
+@Table(name = "tb_user")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,10 +13,10 @@ public class User {
     private String email;
 
     @ManyToOne
-    @JoinColumn(name="department_id")
+    @JoinColumn(name = "department_id")
     private Department department;
-
-    public User(){
+    /* associação de department -> user*/
+    public User() {
     }
 
     public Long getId() {

@@ -1,35 +1,38 @@
 package com.dev.userdept.Controllers;
 
-import com.dev.userdept.Repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import com.dev.userdept.entities.User;
-
 import java.util.List;
+
+import com.dev.userdept.Repositories.UserRepository;
+import com.dev.userdept.entities.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
 
 @RestController
 @RequestMapping(value = "/users")
 public class UserController {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserRepository repository;
 
     @GetMapping
     public List<User> findAll() {
-        List<User> result = userRepository.findAll();
-        return result;
+        return repository.findAll();
     }
 
-    @GetMapping(value="{id}")
+    @GetMapping(value = "/{id}")
     public User findById(@PathVariable Long id) {
-        User result = userRepository.findById(id).get();
-        return result;
+        return repository.findById(id).get();
     }
 
     @PostMapping
-    public User isert(@RequestBody User user) {
-        User result = userRepository.save(user);
-        return result;
+    public User insert(@RequestBody User user) {
+        return repository.save(user);
     }
 }

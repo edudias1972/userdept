@@ -1,16 +1,19 @@
 package com.dev.userdept.entities;
 
-import jakarta.persistence.*;
+
+import javax.persistence.*;
+
 
 @Entity
-@Table(name= "tb_department")
+@Table(name = "tb_department")
 public class Department {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
-    public Department(){
+    public Department() {
     }
 
     public Long getId() {
@@ -28,5 +31,4 @@ public class Department {
     public void setName(String name) {
         this.name = name;
     }
-
 }
